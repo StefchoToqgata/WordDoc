@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zhaniyan Nikolov's BTEC Level 3 computing portfolio, projects, skills, and local document viewer.">
+  <title>Zhaniyan Nikolov | Computing Portfolio</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.dataset.theme=localStorage.getItem('portfolio-theme')||'';</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.svg" alt="">
+        <span>Zhaniyan Nikolov<small>BTEC Level 3 portfolio</small></span>
+      </a>
+      <nav class="nav-links" data-nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="documents.html">Documents</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Change theme">☾</button>
+        <button class="menu-button" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Student developer · BTEC Level 3</p>
+          <h1>I build things, test them, then make them better.</h1>
+          <p class="lead">I am Zhaniyan, a computing student interested in software engineering, practical web development, and turning rough ideas into working projects.</p>
+          <div class="hero-actions">
+            <a class="button" href="projects.html">See my projects <span aria-hidden="true">→</span></a>
+            <a class="button secondary" href="documents.html">Open document viewer</a>
+          </div>
+        </div>
+        <aside class="note-card" aria-label="Portfolio summary">
+          <p class="eyebrow">What is here</p>
+          <h2>A working portfolio, not a template full of filler.</h2>
+          <p>The site covers the main units from my course and includes a browser-based document reader built without Google Docs or Word Online.</p>
+          <ul class="quick-list">
+            <li>Programming and web projects</li>
+            <li>Testing and project reflections</li>
+            <li>PDF, DOCX, and DOC inspection</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">About me</p>
+            <h2>Learning by making real things</h2>
+          </div>
+          <p>I enjoy projects where I can see a clear result: a form that validates properly, a desktop app that solves a task, or a website that feels straightforward to use.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-number">01 / Build</span>
+            <h3>Practical development</h3>
+            <p>I use HTML, CSS, JavaScript, C#, and Python to turn requirements into working features.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">02 / Test</span>
+            <h3>Evidence, not guesses</h3>
+            <p>I write test plans, try invalid data, record faults, and retest after changes.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">03 / Improve</span>
+            <h3>Honest reflection</h3>
+            <p>I document what went well, what broke, and what I would improve in the next version.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2>Projects from across the course</h2>
+          </div>
+          <a class="button secondary" href="projects.html">View all projects</a>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="unit-tag">Unit 4</span>
+            <h3>Multiplication Game</h3>
+            <p>A C# Windows Forms application with random questions, scoring, validation, and clear feedback.</p>
+          </article>
+          <article class="card">
+            <span class="unit-tag">Unit 6</span>
+            <h3>Hot Beans Web</h3>
+            <p>A responsive recruitment website with trainee profiles, job information, courses, and an application form.</p>
+          </article>
+          <article class="card">
+            <span class="unit-tag">Unit 13</span>
+            <h3>Website Test Plan</h3>
+            <p>Black-box testing covering navigation, forms, file validation, browsers, faults, fixes, and retesting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container callout">
+        <p class="eyebrow">Built into this site</p>
+        <h2>Inspect documents without sending them to another service.</h2>
+        <p>PDF files use the browser's own viewer. DOCX files are converted locally in JavaScript. Older DOC files use a best-effort text preview.</p>
+        <a class="button" href="documents.html">Try the document viewer</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span data-year></span> Zhaniyan Nikolov. Built with plain HTML, CSS, and JavaScript.</p>
+      <div class="footer-links">
+        <a href="https://github.com/StefchoToqgata" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
