@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read and inspect PDF, DOCX, and DOC files locally in the browser without Google Docs or Word Online.">
+  <title>Document Viewer | Zhaniyan Nikolov</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.dataset.theme=localStorage.getItem('portfolio-theme')||'';</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="assets/img/logo.svg" alt=""><span>Zhaniyan Nikolov<small>BTEC Level 3 portfolio</small></span></a><nav class="nav-links" data-nav aria-label="Main navigation"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="documents.html" aria-current="page">Documents</a><a href="contact.html">Contact</a></nav><div class="header-actions"><button class="icon-button" type="button" data-theme-toggle aria-label="Change theme">☾</button><button class="menu-button" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">☰</button></div></div></header>
+  <main id="main">
+    <section class="page-hero"><div class="container"><p class="breadcrumb">Home / Documents</p><p class="eyebrow">Private browser-based reader</p><h1>Document viewer</h1><p class="lead">Drop in a PDF, DOCX, or older DOC file. The file stays on the device and is not sent to Google, Microsoft, this website, or any server.</p></div></section>
+    <section class="section compact"><div class="container viewer-layout">
+      <aside class="upload-panel card">
+        <label id="dropZone" class="drop-zone" for="documentFile" role="button" tabindex="0">
+          <span class="drop-icon" aria-hidden="true">⇧</span><strong>Drop a document here</strong><p>or click to choose a file</p><small>PDF, DOCX, or DOC · maximum 50 MB</small>
+        </label>
+        <input class="file-input" id="documentFile" type="file" accept=".pdf,.docx,.doc,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword">
+        <p class="privacy-note"><strong>Local only:</strong> the browser reads the selected file directly. Nothing is uploaded or stored by the site.</p>
+        <div class="file-meta" id="fileMeta"><h3>Selected file</h3><div class="meta-list">
+          <div class="meta-item"><span>Name</span><span id="fileName">—</span></div><div class="meta-item"><span>Format</span><span id="fileType">—</span></div><div class="meta-item"><span>Size</span><span id="fileSize">—</span></div><div class="meta-item"><span>Modified</span><span id="fileDate">—</span></div>
+        </div><button class="button small danger" id="clearFile" type="button">Remove file</button></div>
+        <p class="status-message" id="statusMessage" role="status" aria-live="polite"></p>
+      </aside>
+      <section class="viewer-shell" aria-label="Document preview">
+        <div class="viewer-toolbar">
+          <div class="toolbar-group"><button class="tool-button" id="zoomOut" type="button" title="Zoom out">−</button><button class="tool-button" id="zoomIn" type="button" title="Zoom in">+</button></div>
+          <div class="toolbar-group"><label class="sr-only" for="documentSearch">Search document text</label><input class="search-box" id="documentSearch" type="search" placeholder="Search document text"><span class="search-count" id="searchCount" aria-live="polite"></span></div>
+          <div class="toolbar-group push"><button class="tool-button" id="openDocument" type="button">Open tab</button><button class="tool-button" id="printDocument" type="button">Print</button></div>
+        </div>
+        <p class="viewer-warning hidden" id="warningBar"></p>
+        <div class="viewer-stage" id="viewerStage">
+          <div class="empty-viewer" id="emptyViewer"><div class="empty-viewer-inner"><strong>No document selected</strong><p>Choose a supported file to read it here. For PDF files, use the built-in PDF toolbar and Ctrl+F search.</p></div></div>
+          <iframe class="pdf-frame" id="pdfFrame" title="PDF document preview"></iframe>
+          <div class="document-canvas" id="documentCanvas"><article class="document-page" id="documentPage"></article></div>
+        </div>
+      </section>
+    </div></section>
+    <section class="section compact"><div class="container grid-3">
+      <article class="card"><span class="card-number">PDF</span><h3>Browser-native preview</h3><p>Pages, zoom, print, download, and text search are handled by the browser's built-in PDF reader.</p></article>
+      <article class="card"><span class="card-number">DOCX</span><h3>Local conversion</h3><p>Text, headings, tables, lists, and links are reconstructed safely in the browser.</p></article>
+      <article class="card"><span class="card-number">DOC</span><h3>Best-effort text</h3><p>Old binary Word files are difficult to reproduce in a static website, so the reader extracts readable text where possible.</p></article>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><p>© <span data-year></span> Zhaniyan Nikolov. No documents are uploaded.</p><div class="footer-links"><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div></div></footer>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js"></script><script src="assets/js/document-viewer.js"></script>
+</body>
+</html>
